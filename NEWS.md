@@ -5,3 +5,4 @@
 * Added Github Repo.
 * Added the function `theme_du_bois` and dependency `ggplot2`
 * Added MIT License
+* Setted URL and Bug Reports
