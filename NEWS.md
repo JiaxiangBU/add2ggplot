@@ -7,3 +7,4 @@
 * Added MIT License.
 * Setted URL and Bug Reports.
 * Edited `DESC` and built site using `pkgdown`.
+* Added GitHub Pages.
