@@ -11,7 +11,8 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: 
-    ggplot2
+    ggplot2,
+    magrittr
 URL: https://github.com/JiaxiangBU/add2ggplot
 BugReports: https://github.com/JiaxiangBU/add2ggplot/issues
 RoxygenNote: 6.1.1

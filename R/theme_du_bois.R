@@ -1,9 +1,19 @@
-#' Paste Kindle Notes in an elegant way
+#' Use Du Bois's theme
 #'
-#' @return function
+#' \code{theme_du_bois} is one of ggplot themes for ploting.
+#'
+#' The function I developed originates from this
+#' \href{https://github.com/mtthwastn/statswithmatt/tree/master/ggplot2-meets-w-e-b-du-bois}{GitHub Repository}
+#' by the statistician Matthew A.
+#' He reproduces the sort of images originated from
+#' \href{https://en.wikipedia.org/wiki/W._E._B._Du_Bois}{W.E.B. Du Bois}.
+#'
+#' @param font_name A Character.
+#' @return The function to use \code{+} in the ggplot workflow.
 #' @author Jiaxiang Li
 #'
 #' @import ggplot2
+#' @example \dontrun{ggplot(mtcars,aes(x = mpg, y = cyl)) + geom_point() + theme_du_bois()}
 #' @export
 
 theme_du_bois <- function(font_name = '') {

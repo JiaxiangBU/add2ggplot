@@ -2,15 +2,25 @@
 % Please edit documentation in R/theme_du_bois.R
 \name{theme_du_bois}
 \alias{theme_du_bois}
-\title{Paste Kindle Notes in an elegant way}
+\title{Use Du Bois's theme}
 \usage{
 theme_du_bois(font_name = "")
 }
+\arguments{
+\item{font_name}{A Character.}
+}
 \value{
-function
+The function to use \code{+} in the ggplot workflow.
 }
 \description{
-Paste Kindle Notes in an elegant way
+\code{theme_du_bois} is one of ggplot themes for ploting.
+}
+\details{
+The function I developed originates from this
+\href{https://github.com/mtthwastn/statswithmatt/tree/master/ggplot2-meets-w-e-b-du-bois}{GitHub Repository}
+by the statistician Matthew A.
+He reproduces the sort of images originated from
+\href{https://en.wikipedia.org/wiki/W._E._B._Du_Bois}{W.E.B. Du Bois}.
 }
 \author{
 Jiaxiang Li
