@@ -1,0 +1,36 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# add2ggplot
+
+The goal of add2ggplot is to add more theme for your ggplot object.
+
+## Installation
+
+You can install the released version of add2ggplot from [Github](https://github.com/JiaxiangBU/add2ggplot) with:
+
+```{r eval=F}
+devtools::install_github('JiaxiangBU/add2ggplot')
+```
+
+```{r eval=F}
+library(add2ggplot)
+```
+
+## To-dos
+
+1. [ ] Extract the colors from an image and build a customized palette.
+1. [ ] Add license
+1. [ ] Add badge
+
