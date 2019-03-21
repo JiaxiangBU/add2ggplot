@@ -13,7 +13,6 @@
 #' @author Jiaxiang Li
 #'
 #' @import ggplot2
-#' @example \dontrun{ggplot(mtcars,aes(x = mpg, y = cyl)) + geom_point() + theme_du_bois()}
 #' @export
 
 theme_du_bois <- function(font_name = '') {
