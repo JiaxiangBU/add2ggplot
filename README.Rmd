@@ -35,4 +35,5 @@ library(add2ggplot)
 1. [ ] Add badge
 1. [ ] Add references for the function `theme_du_bois`
 1. [ ] Added examples in the function `theme_du_bois`
+1. [ ] Added coc.
 
