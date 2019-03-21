@@ -1,12 +1,12 @@
 Package: add2ggplot
-Title: What the Package Does (One Line, Title Case)
+Title: Add To Ggplot
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Jiaxiang",
+           family = "Li",
            role = c("aut", "cre"),
-           email = "first.last@example.com")
-Description: What the package does (one paragraph).
+           email = "alex.lijiaxiang@foxmail.com")
+Description: The goal of add2ggplot is to add more theme for your ggplot object.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -14,3 +14,4 @@ Imports:
     ggplot2
 URL: https://github.com/JiaxiangBU/add2ggplot
 BugReports: https://github.com/JiaxiangBU/add2ggplot/issues
+RoxygenNote: 6.1.1
