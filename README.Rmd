@@ -33,4 +33,5 @@ library(add2ggplot)
 1. [ ] Extract the colors from an image and build a customized palette.
 1. [ ] Add license
 1. [ ] Add badge
+1. [ ] Add references for the function `theme_du_bois`
 
