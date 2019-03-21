@@ -4,3 +4,4 @@
 * Added a `README.Rmd` file.
 * Added Github Repo.
 * Added the function `theme_du_bois` and dependency `ggplot2`
+* Added MIT License
