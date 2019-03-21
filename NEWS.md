@@ -1,3 +1,5 @@
+# add2ggplot 0.0.1
+
 * Add references for the function `theme_du_bois`.
 
 # add2ggplot 0.0.0.9000
