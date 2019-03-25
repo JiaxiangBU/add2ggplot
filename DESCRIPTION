@@ -12,7 +12,8 @@ Encoding: UTF-8
 LazyData: true
 Imports: 
     ggplot2,
-    magrittr
+    magrittr,
+    RColorBrewer
 URL: https://github.com/JiaxiangBU/add2ggplot
 BugReports: https://github.com/JiaxiangBU/add2ggplot/issues
 RoxygenNote: 6.1.1

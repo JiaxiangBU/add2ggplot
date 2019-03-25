@@ -1,3 +1,5 @@
+* Added the function `more_colors` to build a more robust palette serving ggplot objects.
+
 # add2ggplot 0.0.1
 
 * Add references for the function `theme_du_bois`.
