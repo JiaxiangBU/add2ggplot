@@ -1,6 +1,6 @@
 Package: add2ggplot
 Title: Add To Ggplot
-Version: 0.0.1
+Version: 0.1.0
 Authors@R: 
     person(given = "Jiaxiang",
            family = "Li",
