@@ -3,6 +3,7 @@
 export("%>%")
 export(more_colors)
 export(theme_du_bois)
+export(theme_ilo)
 import(RColorBrewer)
 import(ggplot2)
 importFrom(magrittr,"%>%")

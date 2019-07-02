@@ -1,4 +1,4 @@
-#' export
+#' @export
 theme_ilo <- function(){
     theme_minimal() +
         theme(
