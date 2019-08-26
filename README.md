@@ -33,14 +33,4 @@ plot_logo <- add_logo(
 plot_logo
 ```
 
-<img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
-
-## To-dos
-
-1.  \[x\] Added license
-2.  \[x\] Add references for the function `theme_du_bois`
-3.  \[ \] Added examples in the function `theme_du_bois`
-4.  \[ \] Extract the colors from an image and build a customized
-    palette.
-5.  \[ \] Add badge
-6.  \[ \] Added coc.
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
