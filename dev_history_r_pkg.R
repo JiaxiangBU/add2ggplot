@@ -33,6 +33,13 @@ file.edit("DESCRIPTION")
 # coding ------------------------------------------------------------------
 
 # add title
+file.edit("R/add_logo.R")
+library(fs)
+dir_create("man/figures")
+# like https://github.com/tidyverse/ggplot2/tree/master/man/figures
+library(tidyverse)
+dir_info("~/Downloads/", regexp = "png")$path %>%
+    map(file_move, new_path = "man/figures/")
 
 # prettify ----------------------------------------------------------------
 
@@ -40,13 +47,14 @@ use_readme_rmd()
 # help translate XGBoost model R object into SQL statement.
 file.edit("DESCRIPTION")
 rmarkdown::render("README.Rmd")
+rstudioapi::viewer("README.html")
 file.remove("README.html")
 
 
 # build -------------------------------------------------------------------
 
 document()
-# load_all()
+load_all()
 install()
 
 

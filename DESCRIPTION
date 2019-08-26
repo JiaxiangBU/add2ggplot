@@ -10,8 +10,7 @@ Authors@R:
     person(given = "Nakagawara",
            family = "Ryo",
            role = c("aut"),
-           email = "ryonakagawara@gmail.com",
-           comment = c(Blog = "https://ryo-n7.github.io/2019-08-21-visualize-soccer-statsbomb-part-1/)))
+           email = "ryonakagawara@gmail.com"))
 Description: The goal of add2ggplot is to add more theme for your ggplot object.
 License: MIT + file LICENSE
 Encoding: UTF-8

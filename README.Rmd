@@ -28,6 +28,23 @@ devtools::install_github('JiaxiangBU/add2ggplot')
 library(add2ggplot)
 ```
 
+
+## Examples
+
+```{r}
+library(add2ggplot)
+```
+
+```{r}
+plot_logo <- add_logo(
+  plot_path = "man/figures/logo.png",
+  logo_path = "man/figures/jiaxiang.png",
+  logo_position = "bottom right",
+  logo_scale = 5)
+plot_logo
+```
+
+
 ## To-dos
 
 1. [x] Added license

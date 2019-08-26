@@ -1,5 +1,20 @@
+#' Add a logo into an image
+#'
+#' @importFrom magick image_info
+
+get_width_height <- function(img) {
+    img_obj <- magick::image_info(img)
+    return(list(width = img_obj$width, height = img_obj$height))
+}
+
+#' @param plot_path image path.
+#' @param logo_path logo image path.
+#' @param logo_position the position of logo within the image.
+#' @param logo_scale the size of logo relative to the image.
 #' @import magick
-#' @importFrom m
+#' @importFrom zeallot "%<-%"
+#' @export
+
 add_logo <-
     function(plot_path,
              logo_path,
@@ -13,8 +28,7 @@ add_logo <-
         logo_raw <- magick::image_read(logo_path)
 
         # get dimensions of plot for scaling
-        plot_height <- magick::image_info(plot)$height
-        plot_width <- magick::image_info(plot)$width
+        c(plot_width, plot_height) %<-% get_width_height(plot)
 
         # default scale to 1/10th width of plot
         # Can change with logo_scale
@@ -22,8 +36,7 @@ add_logo <-
             magick::image_scale(logo_raw, as.character(plot_width / logo_scale))
 
         # Get width of logo
-        logo_width <- magick::image_info(logo)$width
-        logo_height <- magick::image_info(logo)$height
+        c(logo_width, logo_height) %<-% get_width_height(logo)
 
         # Set position of logo
         # Position starts at 0,0 at top left
