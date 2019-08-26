@@ -2,10 +2,10 @@
 % Please edit documentation in R/add_logo.R
 \name{get_width_height}
 \alias{get_width_height}
-\title{Add a logo into an image}
+\title{Get image width and height}
 \usage{
 get_width_height(img)
 }
 \description{
-Add a logo into an image
+Get image width and height
 }
