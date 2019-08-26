@@ -1,11 +1,17 @@
 Package: add2ggplot
 Title: Add To Ggplot
 Version: 0.1.0
-Authors@R: 
-    person(given = "Jiaxiang",
+Authors@R:
+    c(person(given = "Jiaxiang",
            family = "Li",
            role = c("aut", "cre"),
-           email = "alex.lijiaxiang@foxmail.com")
+           email = "alex.lijiaxiang@foxmail.com",
+           comment = c(ORCID = "https://orcid.org/0000-0003-3196-6492")),
+    person(given = "Nakagawara",
+           family = "Ryo",
+           role = c("aut"),
+           email = "ryonakagawara@gmail.com",
+           comment = c(Blog = "https://ryo-n7.github.io/2019-08-21-visualize-soccer-statsbomb-part-1/)))
 Description: The goal of add2ggplot is to add more theme for your ggplot object.
 License: MIT + file LICENSE
 Encoding: UTF-8
