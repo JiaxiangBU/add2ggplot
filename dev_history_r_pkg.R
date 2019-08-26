@@ -34,6 +34,7 @@ file.edit("DESCRIPTION")
 
 # add title
 file.edit("R/add_logo.R")
+file.edit("README.Rmd")
 library(fs)
 dir_create("man/figures")
 # like https://github.com/tidyverse/ggplot2/tree/master/man/figures
@@ -54,7 +55,7 @@ file.remove("README.html")
 # build -------------------------------------------------------------------
 
 document()
-load_all()
+# load_all()
 install()
 
 

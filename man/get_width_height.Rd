@@ -7,5 +7,5 @@
 get_width_height(img)
 }
 \description{
-\code{more_colors} helps users to build a more robust palette serving ggplot objects.
+Add a logo into an image
 }

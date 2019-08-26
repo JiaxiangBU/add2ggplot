@@ -1,4 +1,4 @@
-#' Add a logo into an image
+#' Get image width and height
 #'
 #' @importFrom magick image_info
 
@@ -7,6 +7,8 @@ get_width_height <- function(img) {
     return(list(width = img_obj$width, height = img_obj$height))
 }
 
+#' Add a logo into an image
+#'
 #' @param plot_path image path.
 #' @param logo_path logo image path.
 #' @param logo_position the position of logo within the image.
@@ -14,6 +16,12 @@ get_width_height <- function(img) {
 #' @import magick
 #' @importFrom zeallot "%<-%"
 #' @export
+#' @examples
+#' \dontrun{add_logo(}
+#' \dontrun{    plot_path = "man/figures/logo.png",}
+#' \dontrun{    logo_path = "man/figures/jiaxiang.png",}
+#' \dontrun{    logo_position = "bottom right",}
+#' \dontrun{    logo_scale = 5)}
 
 add_logo <-
     function(plot_path,
