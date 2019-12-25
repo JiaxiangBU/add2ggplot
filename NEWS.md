@@ -1,3 +1,5 @@
+* Added the function `theme_grey_and_red`.
+
 # add2ggplot 0.1.0
 
 * Added the function `more_colors` to build a more robust palette serving ggplot objects.
