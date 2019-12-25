@@ -1,5 +1,7 @@
+globalVariables(c('plot_width', 'plot_height', 'logo_width', 'logo_height'))
+
 #' Get image width and height
-#'
+#' @param img The path of image
 #' @importFrom magick image_info
 
 get_width_height <- function(img) {

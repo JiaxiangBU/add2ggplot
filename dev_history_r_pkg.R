@@ -73,6 +73,8 @@ library(devtools)
 document()
 install()
 
+use_build_ignore("docs")
+
 # commit
 
 git2r::add(path = ".")

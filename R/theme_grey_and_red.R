@@ -26,14 +26,19 @@ theme_grey_and_red <- function() {
 
 }
 
+#' The chosen color in grey
 #' @export
 grey_one <- grDevices::rgb(85, 94, 107, max = 255)
+#' The chosen color in grey
 #' @export
 grey_two <- grDevices::rgb(191, 191, 191, max = 255)
+#' The chosen color in red
 #' @export
 red_one <- grDevices::rgb(201, 59, 74, max = 255)
+#' The chosen color in red
 #' @export
 red_two <- grDevices::rgb(186, 49, 79, max = 255)
+#' The chosen color in white
 #' @export
 white_one <- grDevices::rgb(255, 255, 255, max = 255)
 # get RGB by screenshot shortcut

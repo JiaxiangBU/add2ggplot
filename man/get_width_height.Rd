@@ -6,6 +6,9 @@
 \usage{
 get_width_height(img)
 }
+\arguments{
+\item{img}{The path of image}
+}
 \description{
 Get image width and height
 }

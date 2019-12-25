@@ -7,6 +7,7 @@
 #' @author Jiaxiang Li
 #'
 #' @import RColorBrewer
+#' @importFrom utils head
 #' @export
 
 more_colors <- function(n = 24){

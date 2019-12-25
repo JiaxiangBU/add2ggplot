@@ -1,3 +1,4 @@
+#' One ggplot theme
 #' @export
 theme_ilo <- function(){
     theme_minimal() +

@@ -18,7 +18,9 @@ LazyData: true
 Imports: 
     ggplot2,
     magrittr,
-    RColorBrewer
+    RColorBrewer,
+    magick,
+    zeallot
 URL: https://github.com/JiaxiangBU/add2ggplot
 BugReports: https://github.com/JiaxiangBU/add2ggplot/issues
 RoxygenNote: 6.1.1
