@@ -128,7 +128,6 @@ rmarkdown::render("README.Rmd")
 rstudioapi::viewer("README.html")
 purrr::safely(file.remove)("README.html")
 
-
 # add vignette ------------------------------------------------------------
 
 use_vignette("lift_chart")
@@ -139,6 +138,9 @@ start_time <- lubridate::now()
 pkgdown::build_site()
 end_time <- lubridate::now()
 end_time - start_time
+
+git2r::add(path = ".")
+git2r::commit(message = "update pkgdown website")
 
 # add examlpes ------------------------------------------------------------
 
