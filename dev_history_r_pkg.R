@@ -1,17 +1,12 @@
 
 # setup -------------------------------------------------------------------
 
-
-
+library(devtools)
+use_git()
 
 library(devtools)
-# use_git()
-
-# https://github.com/JiaxiangBU/add2impala/blob/master/DESCRIPTION
-file.edit("DESCRIPTION")
-library(devtools)
-
 use_build_ignore("dev_history_r_pkg.R")
+use_git_ignore("dev_history_r_pkg.R")
 use_roxygen_md()
 use_pipe()
 library(magrittr)
@@ -19,45 +14,64 @@ library(magrittr)
 options(usethis.full_name = "Jiaxiang Li")
 use_mit_license()
 
-
-# rm packrat --------------------------------------------------------------
-
 # rm -rf packrat
-
 
 # desc --------------------------------------------------------------------
 
 add2pkg::add_me(is_paste = TRUE)
 file.edit("DESCRIPTION")
 
-# coding ------------------------------------------------------------------
+# add disclaimer ----------------------------------------------------------
 
-# add title
-file.edit("R/add_logo.R")
+file.edit("DESCRIPTION")
+clipr::write_clip('`r add2pkg::add_disclaimer("Jiaxiang Li")`')
+use_readme_rmd()
 file.edit("README.Rmd")
-library(fs)
-dir_create("man/figures")
-# like https://github.com/tidyverse/ggplot2/tree/master/man/figures
-library(tidyverse)
-dir_info("~/Downloads/", regexp = "png")$path %>%
-    map(file_move, new_path = "man/figures/")
+rmarkdown::render("README.Rmd")
+rstudioapi::viewer("README.html")
+file.remove("README.html")
+usethis::use_code_of_conduct()
 
 # prettify ----------------------------------------------------------------
 
+if (file.exists("README.Rmd")) {
+    file.rename("README.Rmd", "README-bak.Rmd")
+    file.edit("README-bak.Rmd")
+}
 use_readme_rmd()
-# help translate XGBoost model R object into SQL statement.
-file.edit("DESCRIPTION")
+file.edit("README.Rmd")
+file.remove("README-bak.Rmd")
 rmarkdown::render("README.Rmd")
 rstudioapi::viewer("README.html")
 file.remove("README.html")
 
+# add commit --------------------------------------------------------------
+
+git2r::add(path = ".")
+glue::glue("Add metadata
+
+1. license
+1. readme
+1. namespace
+1. desc
+1. coc
+1. `%>%`
+") %>% git2r::commit(message = .)
+
+
+# coding ------------------------------------------------------------------
+
+# add title
 
 # build -------------------------------------------------------------------
 
+library(devtools)
 document()
-# load_all()
-install()
+load_all()
 
+library(devtools)
+document()
+install()
 
 # commit
 
@@ -67,18 +81,6 @@ use_news_md()
 file.edit("NEWS.md")
 use_version()
 usethis::use_github_release()
-
-
-# add disclaimer ----------------------------------------------------------
-
-file.edit("DESCRIPTION")
-clipr::write_clip('`r add2pkg::add_disclaimer("Jiaxiang Li")`')
-file.edit("README.Rmd")
-rmarkdown::render("README.Rmd")
-rstudioapi::viewer("README.html")
-file.remove("README.html")
-usethis::use_code_of_conduct()
-
 
 # publish -----------------------------------------------------------------
 
@@ -92,7 +94,7 @@ file.edit("NEWS.md")
 use_github_release()
 rmarkdown::render("README.Rmd")
 rstudioapi::viewer("README.html")
-safely(file.remove)("README.html")
+purrr::safely(file.remove)("README.html")
 # 因为会更新 citations，但是要等一会。
 # publish release
 
@@ -121,19 +123,12 @@ file.edit("README.Rmd")
 # 需要等一段时间，有时候 doi 没有显示出来
 rmarkdown::render("README.Rmd")
 rstudioapi::viewer("README.html")
-safely(file.remove)("README.html")
+purrr::safely(file.remove)("README.html")
 
 
 # add vignette ------------------------------------------------------------
 
 use_vignette("lift_chart")
-
-# build -------------------------------------------------------------------
-
-document()
-# load_all()
-install()
-
 
 # pkgdown -----------------------------------------------------------------
 
@@ -145,7 +140,7 @@ end_time - start_time
 # add examlpes ------------------------------------------------------------
 
 clipr::read_clip() %>%
-    str_c("#' ", .) %>%
+    stringr::str_c("#' ", .) %>%
     clipr::write_clip()
 
 clipr::read_clip() %>%
