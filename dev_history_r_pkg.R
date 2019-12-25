@@ -75,6 +75,9 @@ install()
 
 # commit
 
+git2r::add(path = .)
+git2r::commit(message = "update README with examples, add the function of `theme_grey_and_red`, update dev history")
+
 # release -----------------------------------------------------------------
 
 use_news_md()

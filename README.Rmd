@@ -43,3 +43,40 @@ plot_logo <- add_logo(
   logo_scale = 5)
 plot_logo
 ```
+
+
+```{r}
+library(ggrepel)
+df <- 
+mtcars %>%
+    tibble::rownames_to_column()
+```
+
+```{r}
+df %>%
+    ggplot() +
+    aes(mpg, disp, label = rowname) +
+    geom_point(color = 'white') +
+    # geom_label_repel use fill arg in the segments.
+    geom_label_repel(
+        data = function(x)
+            df %>% head,
+        arrow = arrow(length = unit(0.02, "npc")),
+        box.padding = 1,
+        segment.color = white_one,
+        color = white_one,
+        label.size = NA,
+        fill = red_two,
+        aes(face = "bold")
+    ) +
+    # theme_white()
+    theme_grey_and_red() +
+    labs(
+        title = '使用labs覆盖',
+        subtitle = '使用labs覆盖',
+        x = '使用labs覆盖',
+        y = '使用labs覆盖',
+        caption = '备注: 使用labs覆盖'
+    )
+```
+
