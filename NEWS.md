@@ -1,3 +1,5 @@
+# add2ggplot 0.2.0
+
 * Added the function `theme_grey_and_red`.
 
 # add2ggplot 0.1.0
