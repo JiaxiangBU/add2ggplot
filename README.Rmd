@@ -80,3 +80,31 @@ df %>%
     )
 ```
 
+
+```{r}
+z <-
+    ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, col = Species)) +
+    geom_jitter(alpha = 0.7) +
+    scale_color_brewer(
+        "Species",
+        palette = "Dark2",
+        labels = c("Setosa",
+                   "Versicolor",
+                   "Virginica")
+    ) +
+    scale_y_continuous("Width (cm)",
+                       limits = c(2, 4.5),
+                       expand = c(0, 0)) +
+    scale_x_continuous("Length (cm)", limits = c(4, 8), expand = c(0, 0)) +
+    ggtitle("Sepals") +
+    coord_fixed(1)
+```
+
+
+```{r}
+z
+z + theme_classic()
+z + theme_classic2()
+```
+
+`r add2pkg::add_disclaimer("Jiaxiang Li")`

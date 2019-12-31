@@ -79,3 +79,67 @@ df %>%
 ```
 
 <img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
+
+``` r
+z <-
+    ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, col = Species)) +
+    geom_jitter(alpha = 0.7) +
+    scale_color_brewer(
+        "Species",
+        palette = "Dark2",
+        labels = c("Setosa",
+                   "Versicolor",
+                   "Virginica")
+    ) +
+    scale_y_continuous("Width (cm)",
+                       limits = c(2, 4.5),
+                       expand = c(0, 0)) +
+    scale_x_continuous("Length (cm)", limits = c(4, 8), expand = c(0, 0)) +
+    ggtitle("Sepals") +
+    coord_fixed(1)
+```
+
+``` r
+z
+#> Warning: Removed 1 rows containing missing values (geom_point).
+```
+
+<img src="man/figures/README-unnamed-chunk-8-1.png" width="100%" />
+
+``` r
+z + theme_classic()
+```
+
+<img src="man/figures/README-unnamed-chunk-8-2.png" width="100%" />
+
+``` r
+z + theme_classic2()
+```
+
+<img src="man/figures/README-unnamed-chunk-8-3.png" width="100%" />
+
+<h4 align="center">
+
+**Code of Conduct**
+
+</h4>
+
+<h6 align="center">
+
+Please note that the `add2ggplot` project is released with a
+[Contributor Code of Conduct](.github/CODE_OF_CONDUCT.md).<br>By
+contributing to this project, you agree to abide by its terms.
+
+</h6>
+
+<h4 align="center">
+
+**License**
+
+</h4>
+
+<h6 align="center">
+
+MIT © [Jiaxiang Li](LICENSE.md)
+
+</h6>
