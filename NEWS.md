@@ -1,6 +1,6 @@
 # add2ggplot 0.3.0
 
-* Added the function of `theme_classic2`, update coc in README.
+* Added the function of `theme_classic2`, update coc in `README.Rmd`.
 
 # add2ggplot 0.2.0
 
@@ -19,9 +19,9 @@
 
 * Added a `NEWS.md` file to track changes to the package.
 * Added a `README.Rmd` file.
-* Added Github Repo.
+* Added Github Repository.
 * Added the function `theme_du_bois` and dependency `ggplot2`.
 * Added MIT License.
-* Setted URL and Bug Reports.
+* Set URL and Bug Reports.
 * Edited `DESC` and built site using `pkgdown`.
 * Added GitHub Pages.

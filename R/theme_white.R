@@ -3,11 +3,11 @@
 theme_white <- function(){
 
     theme(
-        plot.background = element_rect(
+        plot.background = ggplot2::element_rect(
             fill = "white",
             color = "white"
         ),
-        panel.background = element_rect(
+        panel.background = ggplot2::element_rect(
             fill = "white",
             color = "white"
         ),
