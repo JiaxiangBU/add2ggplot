@@ -1,3 +1,5 @@
+# add2ggplot 0.3.0
+
 * Added the function of `theme_classic2`, update coc in README.
 
 # add2ggplot 0.2.0
