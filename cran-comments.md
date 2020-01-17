@@ -7,6 +7,4 @@
 
 0 errors | 0 warnings | 1 note
 
-* Fix mis-spelling.
-* Drop invalid urls.
-* Fix Title in the tite case.
+* Fix invalid urls.
