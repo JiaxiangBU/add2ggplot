@@ -108,6 +108,7 @@ z
 
 ``` r
 z + theme_classic()
+#> Warning: Removed 1 rows containing missing values (geom_point).
 ```
 
 <img src="man/figures/README-unnamed-chunk-8-2.png" width="100%" />
@@ -127,7 +128,8 @@ z + theme_classic2()
 <h6 align="center">
 
 Please note that the `add2ggplot` project is released with a
-[Contributor Code of Conduct](.github/CODE_OF_CONDUCT.md).<br>By
+[Contributor Code of
+Conduct](https://github.com/JiaxiangBU/add2ggplot/blob/master/CODE_OF_CONDUCT.md).<br>By
 contributing to this project, you agree to abide by its terms.
 
 </h6>
@@ -140,6 +142,7 @@ contributing to this project, you agree to abide by its terms.
 
 <h6 align="center">
 
-MIT © [Jiaxiang Li](LICENSE.md)
+MIT © [Jiaxiang
+Li](https://github.com/JiaxiangBU/add2ggplot/blob/master/LICENSE.md)
 
 </h6>
