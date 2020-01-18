@@ -7,4 +7,4 @@
 
 0 errors | 0 warnings | 1 note
 
-* Fix invalid urls.
+* Add Code of Conduct
