@@ -7,4 +7,4 @@
 
 0 errors | 0 warnings | 1 note
 
-* Add Code of Conduct
+* Add Code of Conduct url.
