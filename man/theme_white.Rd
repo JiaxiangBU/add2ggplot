@@ -6,6 +6,15 @@
 \usage{
 theme_white()
 }
+\value{
+The function to use \code{+} in the ggplot workflow.
+}
 \description{
 A ggplot theme with a white background.
+}
+\examples{
+datasets::mtcars \%>\%
+  ggplot2::ggplot(ggplot2::aes(mpg, disp)) +
+  ggplot2::geom_point() +
+  theme_white()
 }

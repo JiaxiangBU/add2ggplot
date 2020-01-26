@@ -24,3 +24,7 @@ Imports:
 URL: https://github.com/JiaxiangBU/add2ggplot
 BugReports: https://github.com/JiaxiangBU/add2ggplot/issues
 RoxygenNote: 6.1.1
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

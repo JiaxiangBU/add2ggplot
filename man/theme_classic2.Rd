@@ -6,7 +6,16 @@
 \usage{
 theme_classic2()
 }
+\value{
+ggplot object.
+}
 \description{
 # Inspired by
 https://www.datacamp.com//courses/intermediate-data-visualization-with-ggplot2
+}
+\examples{
+datasets::mtcars \%>\%
+  ggplot2::ggplot(ggplot2::aes(mpg, disp)) +
+  ggplot2::geom_point() +
+  theme_classic2()
 }

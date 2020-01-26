@@ -1,0 +1,66 @@
+---
+title: "intro"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{intro}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(add2ggplot)
+```
+
+```{r}
+add_logo(
+    plot_path = system.file("extdata", "logo.png", package = "add2ggplot"),
+    logo_path = system.file("extdata", "jiaxiang.png", package = "add2ggplot"),
+    logo_position = "bottom right",
+    logo_scale = 5
+)
+```
+
+```{r}
+ more_colors(n = 12)
+ more_colors(n = 24)
+ more_colors(n = 36)
+```
+
+```{r}
+mtcars %>% 
+  ggplot2::ggplot(ggplot2::aes(mpg, disp)) +
+  ggplot2::geom_point() +
+  theme_classic2()
+```
+```{r}
+mtcars %>% 
+  ggplot2::ggplot(ggplot2::aes(mpg, disp)) +
+  ggplot2::geom_point() +
+  theme_du_bois()
+```
+```{r}
+mtcars %>% 
+  ggplot2::ggplot(ggplot2::aes(mpg, disp)) +
+  ggplot2::geom_point() +
+  theme_grey_and_red()
+```
+```{r}
+mtcars %>% 
+  ggplot2::ggplot(ggplot2::aes(mpg, disp)) +
+  ggplot2::geom_point() +
+  theme_ilo()
+```
+```{r}
+mtcars %>% 
+  ggplot2::ggplot(ggplot2::aes(mpg, disp)) +
+  ggplot2::geom_point() +
+  theme_white()
+```
+

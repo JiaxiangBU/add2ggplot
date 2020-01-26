@@ -151,8 +151,17 @@ clipr::read_clip() %>%
     clipr::write_clip()
 
 clipr::read_clip() %>%
-    str_c("#' \\dontrun{", ., "}") %>%
+    stringr::str_c("#' ", .) %>%
+    stringr::str_flatten("\n") %>%
+    stringr::str_c("#' \\donttest{", ., "}") %>%
     clipr::write_clip()
+
+# return
+
+clipr::read_clip() %>%
+    stringr::str_remove("^#'") %>%
+    clipr::write_clip()
+
 
 # update template ---------------------------------------------------------
 

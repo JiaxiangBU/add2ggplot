@@ -22,6 +22,12 @@ by the statistician Matthew A.
 He reproduces the sort of images originated from
 \href{https://en.wikipedia.org/wiki/W._E._B._Du_Bois}{W.E.B. Du Bois}.
 }
+\examples{
+datasets::mtcars \%>\%
+  ggplot2::ggplot(ggplot2::aes(mpg, disp)) +
+  ggplot2::geom_point() +
+  theme_du_bois()
+}
 \author{
 Jiaxiang Li
 }

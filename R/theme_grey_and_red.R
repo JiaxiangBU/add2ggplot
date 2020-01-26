@@ -1,10 +1,15 @@
 #' Use the ggplot theme in grey and red
 #'
-#' @return The function to use \code{+} in the ggplot workflow.
 #' @author Jiaxiang Li
 #'
 #' @import ggplot2
+#' @return The function to use \code{+} in the ggplot workflow.
 #' @export
+#' @examples
+#' datasets::mtcars %>%
+#'   ggplot2::ggplot(ggplot2::aes(mpg, disp)) +
+#'   ggplot2::geom_point() +
+#'   theme_grey_and_red()
 theme_grey_and_red <- function() {
     ggplot2::theme_gray() %+replace%
         ggplot2::theme(

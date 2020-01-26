@@ -15,6 +15,11 @@ The vector of the colors you choose
 \description{
 \code{more_colors} helps users to build a more robust palette serving ggplot objects.
 }
+\examples{
+more_colors(n = 12)
+more_colors(n = 24)
+more_colors(n = 36)
+}
 \author{
 Jiaxiang Li
 }

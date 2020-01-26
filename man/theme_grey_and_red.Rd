@@ -12,6 +12,12 @@ The function to use \code{+} in the ggplot workflow.
 \description{
 Use the ggplot theme in grey and red
 }
+\examples{
+datasets::mtcars \%>\%
+  ggplot2::ggplot(ggplot2::aes(mpg, disp)) +
+  ggplot2::geom_point() +
+  theme_grey_and_red()
+}
 \author{
 Jiaxiang Li
 }

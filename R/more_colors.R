@@ -9,6 +9,10 @@
 #' @import RColorBrewer
 #' @importFrom utils head
 #' @export
+#' @examples
+#' more_colors(n = 12)
+#' more_colors(n = 24)
+#' more_colors(n = 36)
 
 more_colors <- function(n = 24){
     c(

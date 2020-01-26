@@ -17,13 +17,15 @@ get_width_height <- function(img) {
 #' @param logo_scale the size of logo relative to the image.
 #' @import magick
 #' @importFrom zeallot "%<-%"
+#' @return Image.
 #' @export
 #' @examples
-#' \dontrun{add_logo(}
-#' \dontrun{    plot_path = "man/figures/logo.png",}
-#' \dontrun{    logo_path = "man/figures/jiaxiang.png",}
-#' \dontrun{    logo_position = "bottom right",}
-#' \dontrun{    logo_scale = 5)}
+#' \donttest{add_logo(
+#'     plot_path = system.file("extdata", "logo.png", package = "add2ggplot"),
+#'     logo_path = system.file("extdata", "jiaxiang.png", package = "add2ggplot"),
+#'     logo_position = "bottom right",
+#'     logo_scale = 5
+#' )}
 
 add_logo <-
     function(plot_path,

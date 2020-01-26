@@ -2,3 +2,5 @@ archive.Rmd
 .Rhistory
 .RData
 .Rproj.user
+dev_history_r_pkg.R
+inst/doc

@@ -16,13 +16,17 @@ add_logo(plot_path, logo_path, logo_position = c("top right", "top left",
 
 \item{logo_scale}{the size of logo relative to the image.}
 }
+\value{
+Image.
+}
 \description{
 Add a logo into an image
 }
 \examples{
-\dontrun{add_logo(}
-\dontrun{    plot_path = "man/figures/logo.png",}
-\dontrun{    logo_path = "man/figures/jiaxiang.png",}
-\dontrun{    logo_position = "bottom right",}
-\dontrun{    logo_scale = 5)}
+\donttest{add_logo(
+    plot_path = system.file("extdata", "logo.png", package = "add2ggplot"),
+    logo_path = system.file("extdata", "jiaxiang.png", package = "add2ggplot"),
+    logo_position = "bottom right",
+    logo_scale = 5
+)}
 }

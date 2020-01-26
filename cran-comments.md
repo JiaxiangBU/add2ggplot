@@ -5,6 +5,11 @@
 
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note
+0 errors | 0 warnings | 6 note
 
-* Add Code of Conduct url.
+* Update the year of the LICENSE.
+* Use 'donttest' instead of 'dontrun' into the functions.
+* Add '@return' into the function metadata.
+* Add examples for all exported functions.
+* Add depends for some functions.
+* Move used files into 'inst/extdata'.

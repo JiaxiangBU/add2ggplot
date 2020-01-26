@@ -14,7 +14,11 @@
 #'
 #' @import ggplot2
 #' @export
-
+#' @examples
+#' datasets::mtcars %>%
+#'   ggplot2::ggplot(ggplot2::aes(mpg, disp)) +
+#'   ggplot2::geom_point() +
+#'   theme_du_bois()
 theme_du_bois <- function(font_name = '') {
     ggplot2::theme_gray(base_family = font_name) %+replace%
         ggplot2::theme(
