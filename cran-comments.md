@@ -13,3 +13,4 @@
 * Add examples for all exported functions.
 * Add depends for some functions.
 * Move used files into 'inst/extdata'.
+* Fix the invalid url https://en.wikipedia.org/wiki/W._E._B._Du_Bois
