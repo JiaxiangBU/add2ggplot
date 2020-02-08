@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+[![CRAN
+status](https://www.r-pkg.org/badges/version/add2ggplot)](https://CRAN.R-project.org/package=add2ggplot)
 <!-- badges: end -->
 
 The goal of add2ggplot is to add more theme for your ggplot object.
@@ -76,11 +78,11 @@ df %>%
     # theme_white()
     theme_grey_and_red() +
     labs(
-        title = '使用labs覆盖',
-        subtitle = '使用labs覆盖',
-        x = '使用labs覆盖',
-        y = '使用labs覆盖',
-        caption = '备注: 使用labs覆盖'
+        title = '浣跨敤labs瑕嗙洊',
+        subtitle = '浣跨敤labs瑕嗙洊',
+        x = '浣跨敤labs瑕嗙洊',
+        y = '浣跨敤labs瑕嗙洊',
+        caption = '澶囨敞: 浣跨敤labs瑕嗙洊'
     )
 #> Warning: Ignoring unknown aesthetics: face
 ```
@@ -108,7 +110,6 @@ z <-
 
 ``` r
 z
-#> Warning: Removed 1 rows containing missing values (geom_point).
 ```
 
 <img src="man/figures/README-unnamed-chunk-7-1.png" width="100%" />
@@ -121,7 +122,6 @@ z + theme_classic()
 
 ``` r
 z + theme_classic2()
-#> Warning: Removed 1 rows containing missing values (geom_point).
 ```
 
 <img src="man/figures/README-unnamed-chunk-7-3.png" width="100%" />
