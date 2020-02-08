@@ -4,7 +4,7 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r setup, include = FALSE}
+```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
@@ -12,23 +12,28 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
+
 # add2ggplot
+
+<!-- badges: start -->
+<!-- badges: end -->
 
 The goal of add2ggplot is to add more theme for your ggplot object.
 
 ## Installation
 
-You can install the released version of add2ggplot from [Github](https://github.com/JiaxiangBU/add2ggplot) with:
+You can install the released version of add2ggplot from [CRAN](https://CRAN.R-project.org) with:
 
-```{r eval=F}
-devtools::install_github('JiaxiangBU/add2ggplot')
+``` r
+install.packages("add2ggplot")
 ```
 
-```{r eval=F}
-library(add2ggplot)
+And the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("JiaxiangBU/add2ggplot")
 ```
-
-
 ## Examples
 
 ```{r}
@@ -37,8 +42,8 @@ library(add2ggplot)
 
 ```{r}
 plot_logo <- add_logo(
-  plot_path = "man/figures/logo.png",
-  logo_path = "man/figures/jiaxiang.png",
+  plot_path = "inst/extdata/logo.png",
+  logo_path = "inst/extdata/jiaxiang.png",
   logo_position = "bottom right",
   logo_scale = 5)
 plot_logo
@@ -107,4 +112,4 @@ z + theme_classic()
 z + theme_classic2()
 ```
 
-`r add2pkg::add_disclaimer("Jiaxiang Li")`
+`r add2pkg::add_disclaimer("Jiaxiang Li;Nakagawara Ryo")`

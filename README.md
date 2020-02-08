@@ -3,19 +3,26 @@
 
 # add2ggplot
 
+<!-- badges: start -->
+
+<!-- badges: end -->
+
 The goal of add2ggplot is to add more theme for your ggplot object.
 
 ## Installation
 
 You can install the released version of add2ggplot from
-[Github](https://github.com/JiaxiangBU/add2ggplot) with:
+[CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-devtools::install_github('JiaxiangBU/add2ggplot')
+install.packages("add2ggplot")
 ```
 
+And the development version from [GitHub](https://github.com/) with:
+
 ``` r
-library(add2ggplot)
+# install.packages("devtools")
+devtools::install_github("JiaxiangBU/add2ggplot")
 ```
 
 ## Examples
@@ -31,14 +38,14 @@ library(add2ggplot)
 
 ``` r
 plot_logo <- add_logo(
-  plot_path = "man/figures/logo.png",
-  logo_path = "man/figures/jiaxiang.png",
+  plot_path = "inst/extdata/logo.png",
+  logo_path = "inst/extdata/jiaxiang.png",
   logo_position = "bottom right",
   logo_scale = 5)
 plot_logo
 ```
 
-<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
 
 ``` r
 library(ggrepel)
@@ -78,7 +85,7 @@ df %>%
 #> Warning: Ignoring unknown aesthetics: face
 ```
 
-<img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
 
 ``` r
 z <-
@@ -104,20 +111,20 @@ z
 #> Warning: Removed 1 rows containing missing values (geom_point).
 ```
 
-<img src="man/figures/README-unnamed-chunk-8-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-7-1.png" width="100%" />
 
 ``` r
 z + theme_classic()
-#> Warning: Removed 1 rows containing missing values (geom_point).
 ```
 
-<img src="man/figures/README-unnamed-chunk-8-2.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-7-2.png" width="100%" />
 
 ``` r
 z + theme_classic2()
+#> Warning: Removed 1 rows containing missing values (geom_point).
 ```
 
-<img src="man/figures/README-unnamed-chunk-8-3.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-7-3.png" width="100%" />
 
 <h4 align="center">
 
@@ -142,7 +149,7 @@ contributing to this project, you agree to abide by its terms.
 
 <h6 align="center">
 
-MIT © [Jiaxiang
-Li](https://github.com/JiaxiangBU/add2ggplot/blob/master/LICENSE.md)
+MIT © [Jiaxiang Li;Nakagawara
+Ryo](https://github.com/JiaxiangBU/add2ggplot/blob/master/LICENSE.md)
 
 </h6>
