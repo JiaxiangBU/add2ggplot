@@ -1,36 +1,31 @@
-
 # setup -------------------------------------------------------------------
 
 library(devtools)
 use_git()
 
 library(devtools)
-use_build_ignore("dev_history_r_pkg.R")
-use_git_ignore("dev_history_r_pkg.R")
+usethis::use_build_ignore("dev_history_r_pkg.R")
+usethis::use_git_ignore("dev_history_r_pkg.R")
 use_roxygen_md()
 use_pipe()
 library(magrittr)
 
 options(usethis.full_name = "Jiaxiang Li")
 use_mit_license()
+usethis::use_code_of_conduct()
 
 # rm -rf packrat
 
 # desc --------------------------------------------------------------------
 
-add2pkg::add_me(is_paste = TRUE)
-file.edit("DESCRIPTION")
-
-# add disclaimer ----------------------------------------------------------
-
-file.edit("DESCRIPTION")
-clipr::write_clip('`r add2pkg::add_disclaimer("Jiaxiang Li")`')
-use_readme_rmd()
-file.edit("README.Rmd")
-rmarkdown::render("README.Rmd")
-rstudioapi::viewer("README.html")
-file.remove("README.html")
-usethis::use_code_of_conduct()
+library(usethis)
+add2pkg::create_desc()
+author_info <- add2pkg::add_me(is_paste = TRUE)
+desc_lines <- readr::read_lines("DESCRIPTION")
+desc_lines[5] <- author_info
+desc_lines %>% readr::write_lines("DESCRIPTION")
+# file.edit("DESCRIPTION")
+library(tidyverse)
 
 # prettify ----------------------------------------------------------------
 
@@ -39,8 +34,12 @@ if (file.exists("README.Rmd")) {
     file.edit("README-bak.Rmd")
 }
 use_readme_rmd()
-file.edit("README.Rmd")
+read_lines("README.Rmd")[1:20] %>%
+    c("") %>%
+    c('`r add2pkg::add_disclaimer("Jiaxiang Li")`') %>%
+    write_lines("README.Rmd")
 file.remove("README-bak.Rmd")
+file.edit("README.Rmd")
 rmarkdown::render("README.Rmd")
 rstudioapi::viewer("README.html")
 file.remove("README.html")
@@ -58,6 +57,14 @@ glue::glue("Add metadata
 1. `%>%`
 ") %>% git2r::commit(message = .)
 
+
+
+git2r::remote_add(name = "origin",
+                  url = glue::glue("https://github.com/JiaxiangBU/{add2pkg::proj_name()}.git"))
+git2r::push(name = 'origin', refspec = "refs/heads/master", cred = git2r::cred_token(),
+            set_upstream = TRUE
+            # Only one
+            )
 
 # coding ------------------------------------------------------------------
 
@@ -165,10 +172,25 @@ clipr::read_clip() %>%
 
 # update template ---------------------------------------------------------
 
+# update back
 library(fs)
-file_copy("dev_history_r_pkg.R", "../dev_history/refs/dev_history_r_pkg.R",
+file.copy("dev_history_r_pkg.R", "../dev_history/refs/dev_history_r_pkg.R",
           overwrite = TRUE)
-# open it!
+dev_history_repo <- git2r::repository("../dev_history")
+library(magrittr)
+dev_history_repo %>%
+    git2r::status()
+dev_history_repo %>%
+    git2r::add(path = ".")
+dev_history_repo %>%
+    git2r::commit(message = "Update back.")
+dev_history_repo %>%
+    git2r::push(name = 'origin', refspec = "refs/heads/master", cred = git2r::cred_token())
+
+
+# update now
+fs::file_copy("../dev_history/refs/dev_history_r_pkg.R", "dev_history_r_pkg.R",
+          overwrite = TRUE)
 
 
 # push --------------------------------------------------------------------

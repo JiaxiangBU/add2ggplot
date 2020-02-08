@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/add2ggplot)](https://CRAN.R-project.org/package=add2ggplot)
+[![DOI](https://zenodo.org/badge/176868456.svg)](https://zenodo.org/badge/latestdoi/176868456)
 <!-- badges: end -->
 
 The goal of add2ggplot is to add more theme for your ggplot object.
@@ -112,5 +113,24 @@ z
 z + theme_classic()
 z + theme_classic2()
 ```
+
+## Citations
+
+```{r include=FALSE}
+citations <- add2pkg::add_zenodo_citation("README.Rmd")
+```
+
+```{r echo=FALSE, results='asis'}
+cat(citations$Cite)
+```
+
+```{r echo=FALSE, results='asis'}
+cat(paste0("```BibTex\n",citations$BibTex,"\n```"))
+```
+
+```{r echo=FALSE, results='asis'}
+cat(citations$Comments)
+```
+
 
 `r add2pkg::add_disclaimer("Jiaxiang Li;Nakagawara Ryo")`

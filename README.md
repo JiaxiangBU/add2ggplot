@@ -7,6 +7,7 @@
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/add2ggplot)](https://CRAN.R-project.org/package=add2ggplot)
+[![DOI](https://zenodo.org/badge/176868456.svg)](https://zenodo.org/badge/latestdoi/176868456)
 <!-- badges: end -->
 
 The goal of add2ggplot is to add more theme for your ggplot object.
@@ -116,6 +117,7 @@ z
 
 ``` r
 z + theme_classic()
+#> Warning: Removed 1 rows containing missing values (geom_point).
 ```
 
 <img src="man/figures/README-unnamed-chunk-7-2.png" width="100%" />
@@ -125,6 +127,30 @@ z + theme_classic2()
 ```
 
 <img src="man/figures/README-unnamed-chunk-7-3.png" width="100%" />
+
+## Citations
+
+Jiaxiang Li. (2020, February 8). JiaxiangBU/add2ggplot: add2ggplot 0.3.0
+(Version v0.3.0). Zenodo. <http://doi.org/10.5281/zenodo.3659696>
+
+``` bibtex
+@software{jiaxiang_li_2020_3659696,
+  author       = {Jiaxiang Li},
+  title        = {JiaxiangBU/add2ggplot: add2ggplot 0.3.0},
+  month        = feb,
+  year         = 2020,
+  publisher    = {Zenodo},
+  version      = {v0.3.0},
+  doi          = {10.5281/zenodo.3659696},
+  url          = {https://doi.org/10.5281/zenodo.3659696}
+}
+```
+
+If you use add2ggplot, I would be very grateful if you can add a
+citation in your published work. By citing add2ggplot, beyond
+acknowledging the work, you contribute to make it more visible and
+guarantee its growing and sustainability. For citation, please use the
+BibTex or the citation content.
 
 <h4 align="center">
 
